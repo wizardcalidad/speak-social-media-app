@@ -1,6 +1,6 @@
-DROP USER IF EXISTS 'wizardcalidad'@'localhost';
-CREATE USER 'wizardcalidad'@'localhost' IDENTIFIED BY 'wizardcalidad';
-GRANT ALL PRIVILEGES ON speakdb.* TO 'wizardcalidad'@'localhost';
+DROP USER IF EXISTS 'root'@'localhost';
+CREATE USER 'root'@'localhost' IDENTIFIED BY 'root';
+GRANT ALL PRIVILEGES ON speakdb.* TO 'root'@'localhost';
 FLUSH PRIVILEGES ;
 
 DROP DATABASE IF EXISTS speakdb;
