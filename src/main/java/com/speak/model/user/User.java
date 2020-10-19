@@ -1,8 +1,11 @@
-package com.speak.model;
+package com.speak.model.user;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.speak.model.post.Post;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -24,6 +27,8 @@ public class User {
     @Column(nullable = false)
     private String username;
     @Column(nullable = false)
+    @JsonIgnore
+    @ToString.Exclude
     private String password;
     @Column(nullable = false)
     private String emailAddress;
@@ -40,5 +45,18 @@ public class User {
     private String profileImage;
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Image> allImages;
+
+    private String bannerImage;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Video> allvideos;
+
+    @OneToMany
+    private List<User> friends;
+
+    @OneToMany(fetch= FetchType.EAGER, mappedBy="author", cascade = CascadeType.ALL)
+    private List<Post> posts;
+
+
 
 }

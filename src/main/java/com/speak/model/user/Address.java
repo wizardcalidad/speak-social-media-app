@@ -1,4 +1,4 @@
-package com.speak.model;
+package com.speak.model.user;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
