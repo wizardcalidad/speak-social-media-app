@@ -1,7 +1,9 @@
 package com.speak.model.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.speak.model.post.Image;
 import com.speak.model.post.Post;
+import com.speak.model.post.Video;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,7 +17,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="speak")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,7 +28,7 @@ public class User {
     @Column(nullable = false)
     private String username;
     @Column(nullable = false)
-    @JsonIgnore
+    //@JsonIgnore
     @ToString.Exclude
     private String password;
     @Column(nullable = false)

@@ -1,5 +1,6 @@
-package com.speak.model.user;
+package com.speak.model.post;
 
+import com.speak.model.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
